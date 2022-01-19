@@ -1,1 +1,1 @@
-module.exports = ["Token Name", "TN", 100];
+module.exports = ["Idexo Community Key - Test", "ICK", 100];

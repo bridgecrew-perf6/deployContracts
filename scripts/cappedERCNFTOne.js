@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const Contract = await hre.ethers.getContractFactory("CappedERCNFTOne");
-  const contract = await Contract.deploy("Token Name", "TN", 100);
+  const contract = await Contract.deploy("Idexo Community Key - Test", "ICK", 100);
 
   await contract.deployed();
 

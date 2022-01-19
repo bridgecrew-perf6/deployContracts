@@ -2,6 +2,7 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 const {
   ETHERSCAN_API_KEY,
+  FANTOMSCAN_API_KEY,
   INFURA_API_KEY,
   PRIVATE_KEY,
 } = require("./secrets.json");
@@ -33,12 +34,25 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: ETHERSCAN_API_KEY,
+    apiKey: {
+      ropsten: ETHERSCAN_API_KEY,
+      rinkeby: ETHERSCAN_API_KEY,
+      opera: FANTOMSCAN_API_KEY,
+      ftmTestnet: FANTOMSCAN_API_KEY,
+    },
   },
   defaultNetwork: "ropsten",
   networks: {
     ropsten: {
       url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [PRIVATE_KEY],
+    },
+    rinkeby: {
+      url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [PRIVATE_KEY],
+    },
+    opera: {
+      url: "https://rpc.fantom.network/",
       accounts: [PRIVATE_KEY],
     },
   },
