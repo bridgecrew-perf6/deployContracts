@@ -14,3 +14,6 @@ node scripts/sample-script.js
 npx hardhat help
 ```
 # deployContracts
+
+# verify Contract
+https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html
